@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Support - Mongol Notebook Pro</title>
+    <style>
+        :root {
+            --bg-color: #f5f0e1;
+            --text-color: #333;
+            --accent-color: #8b4513;
+            --card-bg: #fff;
+            --primary: #5d4037;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+        }
+        .nav {
+            background: white;
+            padding: 15px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        .logo { font-weight: bold; color: var(--accent-color); font-size: 1.2em; text-decoration: none; }
+        .lang-switch button {
+            background: none;
+            border: 1px solid var(--accent-color);
+            color: var(--accent-color);
+            padding: 5px 12px;
+            cursor: pointer;
+            border-radius: 4px;
+            font-size: 0.9em;
+            margin-left: 5px;
+        }
+        .lang-switch button.active {
+            background: var(--accent-color);
+            color: white;
+        }
+        .container {
+            max-width: 800px;
+            margin: 40px auto;
+            background: var(--card-bg);
+            padding: 60px;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+        }
+        h1 { color: var(--accent-color); margin-top: 0; }
+        h2 { border-bottom: 2px solid var(--bg-color); padding-bottom: 10px; margin-top: 40px; }
+        .contact-btn {
+            display: inline-block;
+            background: var(--accent-color);
+            color: white;
+            padding: 14px 28px;
+            text-decoration: none;
+            border-radius: 30px;
+            font-weight: bold;
+            margin-top: 20px;
+            transition: opacity 0.2s;
+        }
+        .contact-btn:hover { opacity: 0.9; }
+        .footer { margin-top: 60px; font-size: 0.9em; color: #999; text-align: center; border-top: 1px solid #eee; padding-top: 30px; }
+        
+        /* Language Toggle Classes */
+        body[lang="zh"] .en, body[lang="en"] .zh { display: none; }
+    </style>
+</head>
+<body lang="zh">
+    <div class="nav">
+        <a href="marketing.html" class="logo">Mongol Notebook Pro</a>
+        <div class="lang-switch">
+            <button onclick="setLang('zh')" id="btn-zh" class="active">中文</button>
+            <button onclick="setLang('en')" id="btn-en">English</button>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="zh">
+            <h1>技术支持</h1>
+            <p>欢迎来到 Mongol Notebook Pro 支持中心。我们致力于为您提供极致的传统蒙古文书写体验。</p>
+            
+            <h2>常见问题 (FAQ)</h2>
+            <p><strong>问：如何导出我的笔记？</strong><br>
+            答：打开笔记，点击侧边栏中的“导出”按钮。您可以将其保存为高清晰度的纵向长图，非常适合分享到社交媒体。</p>
+            
+            <p><strong>问：我的数据安全吗？</strong><br>
+            答：非常安全。应用采用隐私首位的设计，所有笔记均存储在您的本地设备上。我们建议您使用内置的备份功能将数据导出到您的私有云空间或本地硬盘。</p>
+
+            <p><strong>问：为什么我看不到开屏图？</strong><br>
+            答：如果您刚刚更新，iOS 系统可能会有缓存。请尝试重启应用或设备，比例优化的 Aspect Fill 效果会自动生效。</p>
+            
+            <h2>联系我们</h2>
+            <p>如果您有任何疑问、发现漏洞或有任何功能改进方案，请随时通过邮件与我们联系。</p>
+            <a href="mailto:yf_mst@163.com" class="contact-btn">发送邮件</a>
+        </div>
+
+        <div class="en">
+            <h1>Support Center</h1>
+            <p>Welcome to the Mongol Notebook Pro support center. We are dedicated to providing the ultimate vertical writing experience for Traditional Mongolian.</p>
+            
+            <h2>Frequently Asked Questions</h2>
+            <p><strong>Q: How do I export my notes?</strong><br>
+            A: Open a note and tap the "Export" button in the sidebar. You can save your note as a high-resolution vertical long-image, perfect for social sharing.</p>
+            
+            <p><strong>Q: Is my data private?</strong><br>
+            A: Yes. Following our privacy-first philosophy, all data is stored locally on your device. We recommend using the Backup feature to export and keep your data safe.</p>
+
+            <p><strong>Q: Why is the splash screen not updated?</strong><br>
+            A: iOS sometimes caches the launch image. Please try restarting the app or your device to see the optimized Aspect Fill layout.</p>
+            
+            <h2>Get in Touch</h2>
+            <p>For any questions, bug reports, or feature requests, feel free to reach out to our team.</p>
+            <a href="mailto:yf_mst@163.com" class="contact-btn">Email Support</a>
+        </div>
+        
+        <div class="footer">
+            <p>&copy; 2025 Mongol Notebook Pro. Professional Vertical Writing.</p>
+            <p><a href="privacy.html" style="color: var(--accent-color); text-decoration: none;">Privacy Policy / 隐私政策</a></p>
+        </div>
+    </div>
+
+    <script>
+        function setLang(lang) {
+            document.body.setAttribute('lang', lang);
+            document.getElementById('btn-zh').classList.toggle('active', lang === 'zh');
+            document.getElementById('btn-en').classList.toggle('active', lang === 'en');
+        }
+    </script>
+</body>
+</html>

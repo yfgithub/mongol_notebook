@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mongol Notebook Pro - Professional Vertical Writing</title>
+    <style>
+        :root {
+            --bg-color: #f5f0e1;
+            --text-color: #333;
+            --accent-color: #8b4513;
+            --primary: #5d4037;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            margin: 0;
+            line-height: 1.6;
+        }
+        .nav {
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(10px);
+            padding: 15px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            box-sizing: border-box;
+            z-index: 1000;
+        }
+        .logo { font-weight: bold; color: var(--accent-color); font-size: 1.2em; text-decoration: none; }
+        .lang-switch button {
+            background: none;
+            border: 1px solid var(--accent-color);
+            color: var(--accent-color);
+            padding: 5px 12px;
+            cursor: pointer;
+            border-radius: 4px;
+            font-size: 0.9em;
+            margin-left: 5px;
+        }
+        .lang-switch button.active {
+            background: var(--accent-color);
+            color: white;
+        }
+        header {
+            background: linear-gradient(135deg, var(--primary) 0%, #2b1d19 100%);
+            color: white;
+            padding: 140px 20px 80px;
+            text-align: center;
+        }
+        .container { max-width: 1000px; margin: 0 auto; padding: 60px 20px; }
+        .hero h1 { font-size: 3.5em; margin: 0; font-weight: 800; letter-spacing: -0.02em; }
+        .hero p { font-size: 1.4em; opacity: 0.9; margin-top: 15px; }
+        
+        .mockup-container {
+            margin-top: -60px;
+            text-align: center;
+        }
+        .mockup-image {
+            max-width: 300px;
+            border-radius: 30px;
+            box-shadow: 0 20px 50px rgba(0,0,0,0.3);
+            border: 8px solid #222;
+        }
+
+        .features { 
+            display: grid; 
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); 
+            gap: 40px; 
+            margin-top: 80px; 
+        }
+        .feature-card { 
+            background: white; 
+            padding: 40px; 
+            border-radius: 20px; 
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+            transition: transform 0.3s ease;
+        }
+        .feature-card:hover { transform: translateY(-10px); }
+        .feature-card h3 { color: var(--accent-color); margin-top: 0; font-size: 1.4em; }
+        
+        .footer { text-align: center; padding: 80px 40px; color: #777; border-top: 1px solid #e0dbcd; margin-top: 100px; }
+        .footer a { color: var(--accent-color); text-decoration: none; margin: 0 15px; }
+        
+        .cta { text-align: center; margin-top: 80px; }
+        .btn { 
+            background: var(--accent-color); 
+            color: white; 
+            padding: 18px 50px; 
+            text-decoration: none; 
+            border-radius: 40px; 
+            font-weight: bold; 
+            font-size: 1.2em; 
+            display: inline-block;
+            box-shadow: 0 10px 20px rgba(139, 69, 19, 0.2);
+        }
+        
+        /* Language Toggle Classes */
+        body[lang="zh"] .en, body[lang="en"] .zh { display: none; }
+    </style>
+</head>
+<body lang="zh">
+    <div class="nav">
+        <a href="marketing.html" class="logo">Mongol Notebook Pro</a>
+        <div class="lang-switch">
+            <button onclick="setLang('zh')" id="btn-zh" class="active">中文</button>
+            <button onclick="setLang('en')" id="btn-en">English</button>
+        </div>
+    </div>
+
+    <header>
+        <div class="hero">
+            <div class="zh">
+                <h1>蒙古文专业笔记本 Pro</h1>
+                <p>数字时代的传统蒙古文书写文化盛宴</p>
+            </div>
+            <div class="en">
+                <h1>Mongol Notebook Pro</h1>
+                <p>Elevating Traditional Mongolian writing in the digital age.</p>
+            </div>
+        </div>
+    </header>
+
+    <div class="mockup-container">
+        <!-- Using app splash image as a brand showcase -->
+        <img src="../assets/icon/splash.png" alt="App Preview" class="mockup-image">
+    </div>
+
+    <div class="container">
+        <section>
+            <div class="zh">
+                <h2 style="text-align: center; font-size: 2.2em;">底蕴与创新的完美结合</h2>
+                <p style="text-align: center; font-size: 1.25em; color: #666; max-width: 800px; margin: 20px auto;">
+                    专为 iOS 设计的极致书写体验，完美适配蒙古文从上到下、从左到右的竖向流动逻辑。
+                </p>
+            </div>
+            <div class="en">
+                <h2 style="text-align: center; font-size: 2.2em;">Heritage meets Innovation</h2>
+                <p style="text-align: center; font-size: 1.25em; color: #666; max-width: 800px; margin: 20px auto;">
+                    The most advanced vertical writing experience for iOS, designed specifically for the unique flow of the Traditional Mongolian script.
+                </p>
+            </div>
+            
+            <div class="features">
+                <div class="feature-card">
+                    <div class="zh">
+                        <h3>原生竖向书写</h3>
+                        <p>完整支持从上到下、左向右开启的蒙文排版，尊重民族文化。每一行列都极具美学价值。</p>
+                    </div>
+                    <div class="en">
+                        <h3>Native Verticality</h3>
+                        <p>Full support for top-to-bottom, left-to-right writing that respects your cultural heritage.</p>
+                    </div>
+                </div>
+                <div class="feature-card">
+                    <div class="zh">
+                        <h3>富文本创作</h3>
+                        <p>内置专业蒙文字体，支持加粗、颜色、下划线及图文混排。满足从日记到文学创作的全场景需求。</p>
+                    </div>
+                    <div class="en">
+                        <h3>Rich Typography</h3>
+                        <p>Beautiful fonts and powerful formatting tools to make your creative writing stand out on any device.</p>
+                    </div>
+                </div>
+                <div class="feature-card">
+                    <div class="zh">
+                        <h3>一键精彩分享</h3>
+                        <p>智能捕捉笔记长图，完美适配社交媒体。让古老的文字在现代朋友圈中焕发新生。</p>
+                    </div>
+                    <div class="en">
+                        <h3>Share Your Art</h3>
+                        <p>Export your notes into high-quality vertical long-images, perfect for seamless social media sharing.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="cta">
+            <a href="https://apps.apple.com" class="btn zh">前往 App Store 下载</a>
+            <a href="https://apps.apple.com" class="btn en">Download on the App Store</a>
+        </div>
+
+        <div class="footer">
+            <p>&copy; 2025 Mongol Notebook Pro. Professional Note Taking for Traditional Mongolian.</p>
+            <p>
+                <a href="support.html">Support / 支持</a> | 
+                <a href="privacy.html">Privacy Policy / 隐私政策</a>
+            </p>
+        </div>
+    </div>
+
+    <script>
+        function setLang(lang) {
+            document.body.setAttribute('lang', lang);
+            document.getElementById('btn-zh').classList.toggle('active', lang === 'zh');
+            document.getElementById('btn-en').classList.toggle('active', lang === 'en');
+        }
+    </script>
+</body>
+</html>

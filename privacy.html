@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy - Mongol Notebook Pro</title>
+    <style>
+        :root {
+            --bg-color: #f7f7f7;
+            --text-color: #333;
+            --accent-color: #8b4513;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.8;
+            margin: 0;
+            padding: 0;
+        }
+        .nav {
+            background: white;
+            padding: 15px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+        }
+        .logo { font-weight: bold; color: var(--accent-color); font-size: 1.2em; text-decoration: none; }
+        .lang-switch button {
+            background: none;
+            border: 1px solid var(--accent-color);
+            color: var(--accent-color);
+            padding: 5px 12px;
+            cursor: pointer;
+            border-radius: 4px;
+            font-size: 0.9em;
+            margin-left: 5px;
+        }
+        .lang-switch button.active {
+            background: var(--accent-color);
+            color: white;
+        }
+        .container {
+            max-width: 800px;
+            margin: 40px auto;
+            background: #fff;
+            padding: 60px;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+        }
+        h1 { color: var(--accent-color); border-bottom: 3px solid #f5f0e1; padding-bottom: 10px; }
+        h2 { margin-top: 40px; color: #5d4037; }
+        p { margin-bottom: 20px; }
+        
+        /* Language Toggle Classes */
+        body[lang="zh"] .en, body[lang="en"] .zh { display: none; }
+    </style>
+</head>
+<body lang="zh">
+    <div class="nav">
+        <a href="marketing.html" class="logo">Mongol Notebook Pro</a>
+        <div class="lang-switch">
+            <button onclick="setLang('zh')" id="btn-zh" class="active">中文</button>
+            <button onclick="setLang('en')" id="btn-en">English</button>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="zh">
+            <h1>隐私政策</h1>
+            <p>最后更新日期：2025年12月24日</p>
+            
+            <p>您的隐私对我们至关重要。本隐私政策说明了 Mongol Notebook Pro 如何处理您的信息。</p>
+            
+            <h2>1. 数据收集</h2>
+            <p>Mongol Notebook Pro 是一款隐私优先的应用。所有笔记、图片和设置均<strong>仅存储在您的本地设备上</strong>。我们不会向我们的服务器收集、存储或传输您的个人数据。</p>
+            
+            <h2>2. 第三方服务</h2>
+            <p>应用可能会调用系统服务（如相册或分享功能）来执行保存图片或分享内容的操作。这些交互完全由操作系统（iOS/Android/macOS）的安全框架处理，我们无法访问您的敏感权限数据。</p>
+            
+            <h2>3. 备份</h2>
+            <p>应用提供了备份功能，允许您导出数据。这些备份文件由您本人处理，并可以存储在您首选的位置（如 iCloud、本地存储）。我们无法访问这些备份文件。</p>
+            
+            <h2>4. 政策变更</h2>
+            <p>我们可能会不时更新本隐私政策。任何变更都会发布在此页面上。建议您定期查看。</p>
+            
+            <h2>5. 联系我们</h2>
+            <p>如果您对本隐私政策有任何疑问，请通过 yf_mst@163.com 联系我们。</p>
+        </div>
+
+        <div class="en">
+            <h1>Privacy Policy</h1>
+            <p>Last updated: December 24, 2025</p>
+            
+            <p>Your privacy is important to us. This Privacy Policy explains how Mongol Notebook Pro handles your information.</p>
+            
+            <h2>1. Data Collection</h2>
+            <p>Mongol Notebook Pro is a privacy-first application. All notes, images, and settings are stored <strong>locally</strong> on your device. We do not collect, store, or transmit your personal data to our servers.</p>
+            
+            <h2>2. Third-Party Services</h2>
+            <p>The app may use system services (such as the Image Gallery or Share Sheet) to perform actions like saving images or sharing content. These interactions are handled entirely by your operating system's security framework.</p>
+            
+            <h2>3. Backups</h2>
+            <p>The app provides a backup feature that allows you to export your data. These backup files are handled by you and can be stored in your preferred location (e.g., iCloud, local storage). We have no access to these backup files.</p>
+            
+            <h2>4. Changes to This Policy</h2>
+            <p>We may update our Privacy Policy from time to time. We will notify you of any changes by posting the new Privacy Policy on this page.</p>
+            
+            <h2>5. Contact Us</h2>
+            <p>If you have any questions about this Privacy Policy, please contact us at yf_mst@163.com.</p>
+        </div>
+    </div>
+
+    <script>
+        function setLang(lang) {
+            document.body.setAttribute('lang', lang);
+            document.getElementById('btn-zh').classList.toggle('active', lang === 'zh');
+            document.getElementById('btn-en').classList.toggle('active', lang === 'en');
+        }
+    </script>
+</body>
+</html>
